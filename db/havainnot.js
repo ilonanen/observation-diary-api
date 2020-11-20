@@ -52,7 +52,7 @@ const lisaaHavainto = (req, res) => {
 // poista havainto
 const poistaHavainto = (req, res) => {
     const query = {
-        text: 'DELETE FROM havainnot WHERE lisatty = $1',
+        text: 'DELETE FROM havainnot WHERE id = $1',
         values: [req.params.lisatty],
     }
 
@@ -68,8 +68,8 @@ const poistaHavainto = (req, res) => {
 const paivitaHavainto = (req, res) => {
     const muokattuHavis = req.body
     const query = {
-        text: 'UPDATE havainnot SET pvm = $1, laji = $2, paikka = $3 WHERE lisatty = $4',
-        values: [muokattuHavis.pvm, muokattuHavis.laji, muokattuHavis.paikka, req.params.lisatty]
+        text: 'UPDATE havainnot SET pvm = $1, laji = $2, paikka = $3 WHERE id = $4',
+        values: [muokattuHavis.pvm, muokattuHavis.laji, muokattuHavis.paikka, req.params.id]
     }
 
     db.query(query, (err, res) => {
