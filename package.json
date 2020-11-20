@@ -1,0 +1,20 @@
+{
+  "name": "havaintopaivakirja",
+  "version": "1.0.0",
+  "description": "Havaintopäiväkirja",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  },
+  "engines": {
+    "node": "14.12.0"
+  }
+
+}
